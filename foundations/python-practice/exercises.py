@@ -124,3 +124,58 @@ course = OnlineCourse(
 print(course.describe())
 print(course.describe_platform())
 
+#### Example Problems
+# Example 1: Unique Values and Occurrences
+values = [1, 2, 2, 3, 3, 3]
+# Possible questions:
+# - return unique values#
+# - count occurrences
+
+def unique_count(values):
+    return {value: values.count(value) for value in set(values)}
+def count_occurrences(values):
+    return {value: values.count(value) for value in set(values)}
+
+unique_values = set(values)
+occurrences = count_occurrences(values)
+
+print("Unique values:", unique_values)
+print("Occurrences:", occurrences)
+
+# Example 2 - 
+employees = {
+    "A": 2,
+    "B": 5,
+    "C": 4
+}
+#  Return employees with:
+#  experience >= 4
+
+def filter_experienced_employees(employees, min_experience):
+    return {name: exp for name, exp in employees.items() if exp >= min_experience}
+
+print("Employees with experience >= 4:", filter_experienced_employees(employees, 4))
+
+
+# Example 3 — Fix the class
+# Given:
+class User:
+    def __init__(name, age):
+        name = name
+        age = age
+# Correct concept:
+class User:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Example 4 — Exception
+# Complete:
+try:
+    value = int("abc")
+
+except ValueError:
+    print("Invalid")
+#Expected:
+#ValueError
